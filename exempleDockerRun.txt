@@ -1,0 +1,8 @@
+docker run --name test-web -v "C:\Users\Solk\OneDrive\Documents\Prog\IFA - DEVLOG\Jquery\siteJQuery:/usr/share/nginx/html:ro" -d -p 8080:80 nginx:1.21.0
+docker run --name test-web -p 8080:80 nginx:1.21.0
+docker rm test-web
+
+netstat -nutelap
+docker run --name test-web -d -p 8080:80 nginx/starwars:0.1
+docker run nginx:1.21.0 nginx -g daemon off
+docker run python:3.10.0b1-buster 

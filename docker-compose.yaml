@@ -1,0 +1,15 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  web:
+    build: nginx-starwars
+    image: nginx/starwars:0.1
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/usr/share/nginx/html
+    container_name: test-web
+
+  python:
+    build: serveur-python
+    image: my-python:0.1
+    command: python3 /server.pydocker 

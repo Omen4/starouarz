@@ -1,0 +1,144 @@
+
+body {
+  background: #000 url(//starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-25.jpg);
+  font-family: 'Pathway Gothic One', sans-serif;
+  color: #fbde2b;
+  margin: 10px;
+  padding: 20px;
+  height: 90vh;
+}
+
+.main{
+  display: flex; 
+  flex-direction: column;
+  align-items: center;   
+  width:100%;
+  height:100%;
+  gap:20px;
+}
+
+.logo{
+  width: 500px;
+}
+
+.logo img{
+  width: 100%;
+}
+
+.menuzone{
+  display: flex;
+  text-align:center;
+  font-size: 20px;
+  flex-direction: row;
+  align-items: center; 
+  gap:10px;
+    
+}
+
+#characterSelect{
+  font-size: 25px;
+  color: black;
+  background-color: #fbde2b;
+  width: auto;
+  height: 40px;
+}
+
+.breadcrumb{
+  font-size: 40px;
+  color: aqua;
+}
+
+.fade {
+  position: relative;
+  width: 100%;
+  height: 70%;
+  background-image: linear-gradient(0deg, transparent,black);
+  z-index: 2;
+}
+
+.main-content{
+  background-color: black;
+  width: 100%;
+  flex-grow: 1;
+  overflow: hidden;
+  max-width: 1200px;
+}
+
+#scroller {
+  position: relative;
+  width: 60%;
+  margin: auto;
+  height: 100%;  
+  color: #fbde2b;
+  transform: perspective(200px) rotateX(10deg);
+  z-index: 1;
+}
+
+#scroller div{
+  text-transform: uppercase;
+  font-size:70px;
+  position: absolute;
+  animation: scroller 22s linear;
+  opacity: 0;
+  text-align: center;
+  margin:auto;
+}
+
+.sidebar{
+  position:absolute;
+  top: 10px;
+  right: 10px;
+  width: 200px;
+  height: 200px;
+  border: 3px solid #fbde2b;
+} 
+
+#carrousel img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.styledL, .styledR{
+  padding: 0px;
+  position: absolute;
+  z-index: 2;
+  width: 25px;
+  height: 25px;
+  color:	black;
+  background-color: #fbde2b;
+  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+              inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+.styledL:active, .styledR:active{
+  background-color: black;
+  box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+              inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+
+.styledR {
+  right: 0;
+}
+
+.footer{
+  font-size:10px;
+}
+
+@keyframes scroller {
+  0% {
+    top: 0%;
+    opacity: 1;
+  }
+
+  95% {
+    opacity: 1;
+  }
+
+  100% {
+    top: -500%;
+    opacity: 0;
+  }
+}
+
